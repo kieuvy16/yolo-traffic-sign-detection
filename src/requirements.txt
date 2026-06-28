@@ -1,0 +1,11 @@
+torch
+torchvision
+ultralytics
+opencv-python
+pillow
+flask
+flask-cors
+werkzeug
+numpy
+gTTS
+pygame

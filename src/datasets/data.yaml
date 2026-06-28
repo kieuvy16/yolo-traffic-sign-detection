@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 38
+names: ['0verhead electrical cables', 'Bicycle ban', 'Bus Stop', 'Cars ban', 'Compulsary ahead', 'Compulsory keep left', 'Compulsory keep right', 'Containers ban', 'Dangerous Turn', 'Left Turn', 'Motobike ban', 'Motobike ban1', 'Motorcycles Only', 'No Passenger Cars and Trucks', 'No Two or Three-wheeled Vehicles', 'No U-Turn and No turn right', 'No U-turn', 'No U-turn No turn left', 'No car turn left', 'No car turn right', 'No parking', 'No parking stopping', 'No turn left', 'No turn right', 'One way', 'Packing', 'Pedestrian crossing sign', 'Pedestrians prohibited', 'Priority sign', 'Prohibiting pedestrians', 'Slowly', 'Speed -limit 40', 'Speed -limit 50', 'Speed -limit 60', 'Speed -limit 80', 'U-Turn Allowed', 'Watch for children', 'Yield sign']
+
+roboflow:
+  workspace: vku-jmcnd
+  project: giao-thong-viet-nam
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/vku-jmcnd/giao-thong-viet-nam/dataset/2
