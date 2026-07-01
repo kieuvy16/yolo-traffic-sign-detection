@@ -114,7 +114,11 @@ def rotate_image_bbox(img, bboxes, angle_deg):
         ry_max = min(new_h, ry_max)
 
         # Convert lại YOLO normalized
-       
+        ncx = ((rx_min + rx_max) / 2) / new_w
+        ncy = ((ry_min + ry_max) / 2) / new_h
+        nbw = (rx_max - rx_min) / new_w
+        nbh = (ry_max - ry_min) / new_h
+
         # Bỏ qua bbox quá nhỏ hoặc ngoài ảnh
         if nbw > 0.01 and nbh > 0.01 and nbw < 1.0 and nbh < 1.0:
             new_bboxes.append((cls_id, ncx, ncy, nbw, nbh))
