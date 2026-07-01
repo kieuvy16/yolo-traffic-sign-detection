@@ -110,12 +110,7 @@ class LatestFrameCamera:
             return False
 
         # Best-effort camera tuning. Some backends may ignore some properties.
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
-        self.cap.set(cv2.CAP_PROP_FPS, self.fps)
-
-        if hasattr(cv2, "CAP_PROP_BUFFERSIZE"):
-            self.cap.set(cv2.CAP_PROP_BUFFERSIZE, self.buffer_size)
+        
 
         # Disable autofocus when available to reduce focus hunting in motion.
         if hasattr(cv2, "CAP_PROP_AUTOFOCUS"):
