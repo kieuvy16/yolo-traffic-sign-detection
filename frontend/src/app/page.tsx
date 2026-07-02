@@ -167,7 +167,7 @@ function TabButton({
       className={cn(
         "inline-flex items-center gap-2 rounded-2xl border px-4 py-2.5 text-sm font-medium transition",
         active
-          ? "border-cyan-400/40 bg-cyan-400/15 text-cyan-100 shadow-[0_0_0_1px_rgba(34,211,238,0.15)]"
+          ? "border-cyan-400/40 bg-cyan-400/15 text-cyan-100 shadow-[0_0_0_1px_rgba(3,211,238,0.15)]"
           : "border-white/10 bg-white/5 text-slate-300 hover:bg-white/10"
       )}
     >
@@ -220,12 +220,12 @@ export default function Page() {
   const [error, setError] = useState<string | null>(null);
   const [serverOnline, setServerOnline] = useState(false);
 
-  const [resultImage, setResultImage] = useState<string | null>(null);
-  const [detections, setDetections] = useState<Detection[]>([]);
-  const [recentEvents, setRecentEvents] = useState<RecentEvent[]>([]);
-  const [lastInferenceMs, setLastInferenceMs] = useState<number | null>(null);
-  const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null);
-  const [requestCount, setRequestCount] = useState(0);
+  // const [resultImage, setResultImage] = useState<string | null>(null);
+  // const [detections, setDetections] = useState<Detection[]>([]);
+  // const [recentEvents, setRecentEvents] = useState<RecentEvent[]>([]);
+  // const [lastInferenceMs, setLastInferenceMs] = useState<number | null>(null);
+  // const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null);
+  // const [requestCount, setRequestCount] = useState(0);
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
