@@ -301,7 +301,18 @@ def process_image(image: Image.Image) -> Tuple[str, List[Dict[str, Any]], float]
 @app.route("/")
 def index():
     return render_template("index.html")
-
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify(
+        {
+            "ok": model is not None,
+            "model_path": str(MODEL_PATH),
+            "imgsz": INFERENCE_IMGSZ,
+            "conf": CONF_THRESHOLD,
+            "device": MODEL_DEVICE,
+            "request_gap_ms": REQUEST_GAP_MS,
+        }
+    )
 
 
 @app.route("/detect", methods=["POST"])
