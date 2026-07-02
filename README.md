@@ -1,12 +1,41 @@
-Hướng dẫn chạy phần mềm 
-B1 : Tạo virtual environment (venv)
-B2 : Kích hoạt venv
-venv\Scripts\activate cho win
-source venv/bin/activate cho macos
-B3 : Cài Thư Viện 
+## Hướng dẫn chạy phần mềm
+
+### Bước 1: Tạo môi trường ảo (Virtual Environment)
+
+```bash
+python -m venv venv
+```
+
+### Bước 2: Kích hoạt môi trường ảo
+
+* **Trên Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+* **Trên macOS / Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+### Bước 3: Cài đặt thư viện cần thiết
+
+```bash
 pip install -r requirements.txt
-B4 : chạy main.py
+```
+
+### Bước 4: Chạy backend
+
+```bash
 python src/main.py
-B5 : chạy frontend
-cd frontend 
-npm run dev "# NCKH" 
+```
+
+### Bước 5: Chạy frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
