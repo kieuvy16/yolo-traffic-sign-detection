@@ -88,7 +88,7 @@ def main():
 
     # Top 10 nhiều nhất
     print(f"\n{'='*60}")
-    print(f"  TOP 10 CLASS NHIỀU BBOX NHẤT")
+    print(f"  TOP 10 CLASS NHIỀU BOX NHẤT")
     print(f"{'='*60}")
     sorted_cls = sorted(bbox_count.items(), key=lambda x: x[1], reverse=True)
     for rank, (cls_id, count) in enumerate(sorted_cls[:10], 1):
@@ -96,7 +96,7 @@ def main():
 
     # Bottom 10 ít nhất (chỉ class có > 0)
     print(f"\n{'='*60}")
-    print(f"  TOP 10 CLASS ÍT BBOX NHẤT")
+    print(f"  TOP 10 CLASS ÍT BOX NHẤT")
     print(f"{'='*60}")
     sorted_asc = sorted([(k, v) for k, v in bbox_count.items() if v > 0], key=lambda x: x[1])
     for rank, (cls_id, count) in enumerate(sorted_asc[:10], 1):
